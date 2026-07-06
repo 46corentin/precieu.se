@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wine Offer — Restaurant Price List</title>
+<style>
+  :root{ --bg:#ffffff; --surface:#fafafa; --border:#e8e8e8; --text:#141414; --muted:#8a8a8a; --accent:#9c3b46; }
+  *{box-sizing:border-box;}
+  body{ font-family:-apple-system,BlinkMacSystemFont,'Inter','Helvetica Neue',Arial,sans-serif; background:var(--bg); color:var(--text); margin:0; padding:0 0 80px 0; -webkit-font-smoothing:antialiased; }
+  header{ padding:64px 24px 40px; max-width:980px; margin:0 auto; }
+  header h1{ margin:0 0 8px; font-size:26px; letter-spacing:-0.02em; font-weight:600; }
+  header p{ margin:0; color:var(--muted); font-size:14px; }
+  .wrap{ max-width:980px; margin:0 auto; padding:0 24px; }
+  .legend{ display:flex; gap:24px; flex-wrap:wrap; margin:0 2px 0; font-size:13px; color:var(--muted); }
+  .legend .dot{ display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:7px; }
+  .dot.direct{ background:var(--accent); }
+  .dot.stock{ background:var(--text); }
+  .note-banner{ font-size:13px; color:var(--muted); line-height:1.6; margin:10px 2px 0; padding-top:14px; border-top:1px solid var(--border); }
+  .note-banner strong{ color:var(--text); font-weight:600; }
+  .supplier-nav{ display:flex; gap:8px; flex-wrap:wrap; margin:24px 2px 0; }
+  .supplier-nav a{ font-size:12.5px; color:var(--muted); text-decoration:none; padding:6px 14px; border:1px solid var(--border); border-radius:999px; }
+  .supplier-nav a:hover{ border-color:var(--text); color:var(--text); }
+  .supplier{ margin-top:48px; scroll-margin-top:24px; }
+  .supplier h2{ font-size:17px; font-weight:600; margin:0 0 4px; letter-spacing:-0.01em; }
+  .supplier .meta{ font-size:13px; color:var(--muted); margin-bottom:20px; }
+  .cat-title{ font-size:11.5px; text-transform:uppercase; letter-spacing:0.06em; color:var(--muted); margin:26px 0 10px; font-weight:600; }
+  table{ width:100%; border-collapse:collapse; background:transparent; }
+  thead th{ color:var(--muted); text-align:left; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; padding:0 12px 10px 0; font-weight:500; border-bottom:1px solid var(--text); }
+  thead th.num, tbody td.num{ text-align:right; }
+  tbody td{ padding:13px 12px 13px 0; border-bottom:1px solid var(--border); font-size:14px; }
+  tbody tr:last-child td{ border-bottom:none; }
+  tbody tr:hover{ background:var(--surface); }
+  .wine-name{ font-weight:500; }
+  .vintage{ color:var(--muted); font-size:13px; }
+  .price-direct{ color:var(--accent); font-weight:600; font-size:14px; font-variant-numeric:tabular-nums; }
+  .price-stock{ color:var(--text); font-weight:600; font-size:14px; font-variant-numeric:tabular-nums; }
+  footer{ max-width:980px; margin:56px auto 0; padding:24px 24px 0; font-size:12px; color:var(--muted); border-top:1px solid var(--border); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Wine Offer — Restaurant Price List</h1>
+  <p>François de Nicolay &amp; Domaine des Moriers</p>
+</header>
+<div class="wrap">
+  <div class="legend">
+    <span><span class="dot direct"></span>Direct sales price</span>
+    <span><span class="dot stock"></span>Stock price</span>
+  </div>
+  <div class="note-banner">
+    <strong>Direct sales price</strong> applies to orders of <strong>90 or more bottles from the same supplier</strong>, shipped direct from the domaine. Below that threshold, the <strong>stock price</strong> applies (wine held and delivered locally).
+  </div>
+  <nav class="supplier-nav"><a href="#francois-de-nicolay">François de Nicolay</a><a href="#domaine-des-moriers">Domaine des Moriers</a></nav>
+  <div class="supplier" id="francois-de-nicolay"><h2>François de Nicolay</h2><div class="meta">Savigny-lès-Beaune · Burgundy · Organic (Ecocert), unless noted</div><div class="cat-title">Vins Blancs</div><table><thead><tr><th>Wine</th><th>Vintage</th><th class="num">Direct sales</th><th class="num">Stock</th></tr></thead><tbody><tr><td class="wine-name">Chardonnay &quot;Chardog&quot;</td><td class="vintage">2024</td><td class="num price-direct">170 kr</td><td class="num price-stock">190 kr</td></tr><tr><td class="wine-name">Pétillant Naturel &quot;BulleDog&quot;</td><td class="vintage"></td><td class="num price-direct">230 kr</td><td class="num price-stock">250 kr</td></tr><tr><td class="wine-name">Pétillant Naturel &quot;BulleDog&quot; Rosé</td><td class="vintage"></td><td class="num price-direct">230 kr</td><td class="num price-stock">250 kr</td></tr><tr><td class="wine-name">Bourgogne Blanc</td><td class="vintage">2023</td><td class="num price-direct">230 kr</td><td class="num price-stock">250 kr</td></tr><tr><td class="wine-name">Bouzeron</td><td class="vintage">2023</td><td class="num price-direct">240 kr</td><td class="num price-stock">260 kr</td></tr><tr><td class="wine-name">Mâcon-Péronne</td><td class="vintage">2023</td><td class="num price-direct">250 kr</td><td class="num price-stock">270 kr</td></tr><tr><td class="wine-name">Champlitte Chardonnay</td><td class="vintage">2023</td><td class="num price-direct">280 kr</td><td class="num price-stock">300 kr</td></tr><tr><td class="wine-name">Chablis SSA</td><td class="vintage">2023</td><td class="num price-direct">300 kr</td><td class="num price-stock">320 kr</td></tr><tr><td class="wine-name">Saint-Véran (in conversion)</td><td class="vintage">2023</td><td class="num price-direct">350 kr</td><td class="num price-stock">370 kr</td></tr><tr><td class="wine-name">Côte de Beaune &quot;La Grande Châtelaine&quot;</td><td class="vintage">2023</td><td class="num price-direct">360 kr</td><td class="num price-stock">380 kr</td></tr><tr><td class="wine-name">Rully &quot;Les Maizières&quot;</td><td class="vintage">2023</td><td class="num price-direct">360 kr</td><td class="num price-stock">380 kr</td></tr><tr><td class="wine-name">Savigny Blanc &quot;Les Vermots&quot;</td><td class="vintage">2023</td><td class="num price-direct">370 kr</td><td class="num price-stock">390 kr</td></tr><tr><td class="wine-name">Mercurey Blanc &quot;Les Montelons&quot;</td><td class="vintage">2023</td><td class="num price-direct">380 kr</td><td class="num price-stock">400 kr</td></tr><tr><td class="wine-name">&quot;Sur les Vris&quot; Ladoix</td><td class="vintage">2023</td><td class="num price-direct">380 kr</td><td class="num price-stock">400 kr</td></tr></tbody></table><div class="cat-title">Vins Rouges</div><table><thead><tr><th>Wine</th><th>Vintage</th><th class="num">Direct sales</th><th class="num">Stock</th></tr></thead><tbody><tr><td class="wine-name">Vin de France Pinot-Noir &quot;Pinosheim&quot;</td><td class="vintage">2023</td><td class="num price-direct">230 kr</td><td class="num price-stock">250 kr</td></tr><tr><td class="wine-name">Bourgogne Rouge SSA</td><td class="vintage">2023</td><td class="num price-direct">280 kr</td><td class="num price-stock">300 kr</td></tr><tr><td class="wine-name">Bourgogne Côte d&#39;Auxerre Rouge</td><td class="vintage">2023</td><td class="num price-direct">290 kr</td><td class="num price-stock">310 kr</td></tr><tr><td class="wine-name">Rully &quot;Les Maizières&quot; Rouge (in conversion)</td><td class="vintage">2023</td><td class="num price-direct">360 kr</td><td class="num price-stock">380 kr</td></tr><tr><td class="wine-name">Mercurey Rouge (in conversion)</td><td class="vintage">2023</td><td class="num price-direct">380 kr</td><td class="num price-stock">400 kr</td></tr><tr><td class="wine-name">Savigny-lès-Beaune 1er Cru</td><td class="vintage">2023</td><td class="num price-direct">440 kr</td><td class="num price-stock">460 kr</td></tr></tbody></table></div><div class="supplier" id="domaine-des-moriers"><h2>Domaine des Moriers</h2><div class="meta">Lancié · Beaujolais · In conversion to organic farming</div><div class="cat-title">Vins Rouges</div><table><thead><tr><th>Wine</th><th>Vintage</th><th class="num">Direct sales</th><th class="num">Stock</th></tr></thead><tbody><tr><td class="wine-name">Beaujolais-Villages</td><td class="vintage">2020 / 2021 / 2022</td><td class="num price-direct">160 kr</td><td class="num price-stock">180 kr</td></tr><tr><td class="wine-name">Chiroubles</td><td class="vintage">2021 / 2022</td><td class="num price-direct">170 kr</td><td class="num price-stock">190 kr</td></tr><tr><td class="wine-name">Morgon &quot;Charmes&quot;</td><td class="vintage">2022</td><td class="num price-direct">220 kr</td><td class="num price-stock">240 kr</td></tr><tr><td class="wine-name">Fleurie</td><td class="vintage">2021 / 2022</td><td class="num price-direct">230 kr</td><td class="num price-stock">250 kr</td></tr><tr><td class="wine-name">Moulin à Vent</td><td class="vintage">2019 / 2020 / 2022</td><td class="num price-direct">230 kr</td><td class="num price-stock">250 kr</td></tr><tr><td class="wine-name">Fleurie &quot;La Madone&quot;</td><td class="vintage">2020 / 2022</td><td class="num price-direct">260 kr</td><td class="num price-stock">280 kr</td></tr><tr><td class="wine-name">Moulin à Vent &quot;En Brennay&quot;</td><td class="vintage">2020 / 2022</td><td class="num price-direct">260 kr</td><td class="num price-stock">280 kr</td></tr></tbody></table></div>
+</div>
+<footer>Prices in SEK, per 75cl bottle, excl. VAT. Vintages subject to availability.</footer>
+</body>
+</html>
