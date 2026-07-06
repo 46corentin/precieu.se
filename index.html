@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Wine Offer — Restaurant Price List</title>
 <style>
   :root{ --bg:#ffffff; --surface:#fafafa; --border:#e8e8e8; --text:#141414; --muted:#8a8a8a; --accent:#9c3b46; }
@@ -35,6 +36,21 @@
   .price-direct{ color:var(--accent); font-weight:600; font-size:14px; font-variant-numeric:tabular-nums; }
   .price-stock{ color:var(--text); font-weight:600; font-size:14px; font-variant-numeric:tabular-nums; }
   footer{ max-width:980px; margin:56px auto 0; padding:24px 24px 0; font-size:12px; color:var(--muted); border-top:1px solid var(--border); }
+  @media(max-width:600px){
+    header{ padding:36px 16px 28px; }
+    header h1{ font-size:22px; }
+    .wrap{ padding:0 16px; }
+    table, thead, tbody, tr, th, td{ display:block; }
+    thead{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+    tbody tr{ border:1px solid var(--border); border-radius:10px; padding:14px 16px; margin-bottom:10px; }
+    tbody tr:last-child{ margin-bottom:0; }
+    tbody td{ border-bottom:none; padding:0; }
+    .wine-name{ font-size:15px; margin-bottom:2px; }
+    .vintage{ margin-bottom:8px; }
+    .price-direct, .price-stock{ display:flex; justify-content:space-between; align-items:center; padding-top:8px; margin-top:8px; border-top:1px dashed var(--border); font-size:14px; }
+    .price-direct::before{ content:"Direct sales"; color:var(--muted); font-weight:400; font-size:12.5px; }
+    .price-stock::before{ content:"Stock"; color:var(--muted); font-weight:400; font-size:12.5px; }
+  }
 </style>
 </head>
 <body>
