@@ -1,0 +1,4 @@
+# Private admin tool — contains supplier costs, margins, and EUR export
+# prices. Never publish this. index.html is the safe, formula-free export
+# generated from it and is the only thing that should go live.
+wine_offer.html
